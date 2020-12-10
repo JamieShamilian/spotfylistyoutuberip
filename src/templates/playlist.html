@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Playlist, Flask</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+    </head>
+    <body>
+        {%if name %}
+            It's {{ date.strftime("%A, %d %B, %Y at %X") }}. <br><br>
+            <span class="message">Playlist from, Spotify ID {{ name }}</span> <br>
+            <br>
+            {%if song1 %}
+            <span class="message">Playlist Song 1,  {{ song1 }} - </span> 
+            <a href="{{ url_for('static',filename='outputDir/')}}{{ song1 }} " > {{song1}} </a> <br>
+            {% endif %}
+            {%if song2 %}
+            <span class="message">Playlist Song 2,  {{ song2 }} - </span> 
+            <a href="{{ url_for('static',filename='outputDir/')}}{{ song2 }} " > {{song2}} </a> <br>
+            {% endif %}
+            {%if song3 %}
+            <span class="message">Playlist Song 3,  {{ song3 }} - </span>
+            <a href="{{ url_for('static',filename='outputDir/')}}{{ song3 }} " > {{song3}} </a> <br>
+            {% endif %}
+            {%if song4 %}
+            <span class="message">Playlist Song 4,  {{ song4 }} - </span> 
+            <a href="{{ url_for('static',filename='outputDir/')}}{{ song4 }} " > {{song4}} </a> <br>
+            {% endif %}
+            {%if song5 %}
+            <span class="message">Playlist Song 5,  {{ song5 }} - </span> 
+            <a href="{{ url_for('static',filename='outputDir/')}}{{ song5 }} " > {{song5}} </a> <br>
+            {% endif %}
+            {%if song6 %}
+            <span class="message">Playlist Song 6,  {{ song6 }} - </span> 
+            <a href="{{ url_for('static',filename='outputDir/')}}{{ song6 }} " > {{song6}} </a> <br>
+            {% endif %}
+            {%if song7 %}
+            <span class="message">Playlist Song 7,  {{ song7 }} - </span> 
+            <a href="{{ url_for('static',filename='outputDir/')}}{{ song7 }} " > {{song7}} </a> <br>
+            {% endif %}
+            {%if song8 %}
+            <span class="message">Playlist Song 8,  {{ song8 }} - </span> 
+            <a href="{{ url_for('static',filename='outputDir/')}}{{ song8 }} " > {{song8}} </a> <br>
+            {% endif %}
+            {%if song9 %}
+            <span class="message">Playlist Song 9,  {{ song9 }} - </span> 
+            <a href="{{ url_for('static',filename='outputDir/')}}{{ song9 }} " > {{song9}} </a> <br>
+            {% endif %}
+            {%if song10 %}
+            <span class="message">Playlist Song 10,  {{ song10 }} - </span> 
+            <a href="{{ url_for('static',filename='outputDir/')}}{{ song10 }} " > {{song10}} </a> <br>
+            {% endif %}
+         {% else %}
+            <span class="message">What's your Spotify Playlist ID? Provide it after /playlisy/ in the URL.</span>
+        {% endif %}
+    </body>
+</html>

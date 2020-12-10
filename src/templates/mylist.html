@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}
+Example Spotify playlist
+{% endblock %}
+{% block content %}
+<p>
+    <a href="{{ url_for('playlistCall') }}5TqNbda96FyJEoqPZeIcTX" class="navbar-brand">My Spotify Short Playlist</a> <br>
+    <a href="{{ url_for('playlistCall') }}5xxDzvK9Tezh1RYHxVPgYR" class="navbar-brand">My Spotify Steely Dan Playlist</a> <br>
+    <a href="{{ url_for('playlistCall') }}6eDcgr3PC5EOqa2k0ApB9p" class="navbar-brand">My Spotify 80's Playlist</a> <br>
+</p>
+{% endblock %}
